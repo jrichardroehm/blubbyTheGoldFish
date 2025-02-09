@@ -20,19 +20,20 @@ public partial class Player : CharacterBody2D
 	private Timer shootTimer;
 	private Sprite2D sprite;
 	private AudioStreamPlayer2D jumpSound;
-	private Gun gun;
+	private Node gun;
 	private Camera2D camera;
 
 	private bool _doubleJumpCharged = false;
 
 	public override void _Ready()
 	{
+		GD.Print("Player script is running");
 		platformDetector = GetNode<RayCast2D>("PlatformDetector");
 		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
 		shootTimer = GetNode<Timer>("ShootAnimation");
 		sprite = GetNode<Sprite2D>("Sprite2D");
 		jumpSound = GetNode<AudioStreamPlayer2D>("Jump");
-		gun = sprite.GetNode<Gun>("Gun");
+		gun = sprite.GetNode("Gun");
 		camera = GetNode<Camera2D>("Camera");
 	}
 
@@ -73,7 +74,7 @@ public partial class Player : CharacterBody2D
 		bool isShooting = false;
 		if (Input.IsActionJustPressed("shoot" + ActionSuffix))
 		{
-			isShooting = gun.Shoot(sprite.Scale.X);
+			isShooting = (bool)gun.Call("shoot", sprite.Scale.X);
 		}
 
 		// Animation handling

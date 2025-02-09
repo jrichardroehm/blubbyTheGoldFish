@@ -7,5 +7,6 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	animation_player.play(&"picked")
-	(body as Player).coin_collected.emit()
+    animation_player.play("picked")
+    if body.get_class() == "Player":
+        body.emit_signal("coin_collected")

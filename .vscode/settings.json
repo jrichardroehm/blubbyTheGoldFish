@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "Blub.sln"
+    "dotnet.defaultSolution": "Platformer 2D.sln",
+    "godotTools.editorPath.godot4": "c:/Users/2019/appDevelopment/godot/Godot_v4.3-stable_mono_win64/Godot.exe"
 }

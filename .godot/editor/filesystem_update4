@@ -1,8 +1,2 @@
-res://game_singleplayer.tscn
-res://level/tileset.tres
-res://level/props/wind_sway.tres
-res://gui/theme.tres
-res://game_splitscreen.gd
-res://player/player.gd
-res://game.gd
-res://gui/pause_menu.gd
+res://player/gun.gd
+res://player/Player.cs

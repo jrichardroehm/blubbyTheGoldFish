@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JnI2kafixG0/Fyntr95Q+Xn5drA5uaHLPbzNZ0jwCsHDuBeWCRkr7mYSen+vVDgrq6KBx3KENBmwDJker8vg3A==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\Platformer 2D.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\2019\\.nuget\\packages\\godot.sourcegenerators\\4.3.0\\godot.sourcegenerators.4.3.0.nupkg.sha512",
+    "C:\\Users\\2019\\.nuget\\packages\\godotsharp\\4.3.0\\godotsharp.4.3.0.nupkg.sha512",
+    "C:\\Users\\2019\\.nuget\\packages\\godotsharpeditor\\4.3.0\\godotsharpeditor.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

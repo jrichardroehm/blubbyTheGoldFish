@@ -1,0 +1,17 @@
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.csproj.AssemblyReference.cache
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.AssemblyInfoInputs.cache
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.AssemblyInfo.cs
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.csproj.CoreCompileInputs.cache
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.deps.json
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.runtimeconfig.json
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.dll
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.pdb
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\GodotSharp.dll
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.csproj.CopyComplete
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.dll
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\refint\Platformer 2D.dll
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.pdb
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.genruntimeconfig.cache
+c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\ref\Platformer 2D.dll

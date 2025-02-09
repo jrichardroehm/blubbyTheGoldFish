@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\Platformer 2D.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\Platformer 2D.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\Platformer 2D.csproj",
+        "projectName": "Platformer 2D",
+        "projectPath": "c:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\Platformer 2D.csproj",
+        "packagesPath": "C:\\Users\\2019\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\.godot\\mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\2019\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Godot.SourceGenerators": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "GodotSharp": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "GodotSharpEditor": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

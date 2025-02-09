@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "env": {
+                "DOTNET_ROOT": "C:/Program Files/dotnet/",
+                "DOTNET_VERSION": "6.0.428"
+            },
+            "name": "Launch Godot",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "c:/Users/2019/appDevelopment/godot/Godot_v4.3-stable_mono_win64/Godot.exe",
+            "args": [
+                "--path",
+                "${workspaceFolder}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}
