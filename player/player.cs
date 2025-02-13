@@ -9,6 +9,13 @@ public partial class Player : CharacterBody2D
 	private const float ACCELERATION_SPEED = WALK_SPEED * 6.0f;
 	private const float JUMP_VELOCITY = -725.0f;
 	private const float TERMINAL_VELOCITY = 700.0f;
+	private const float DRIFT_SPEED = 0.0f;
+	private const float DRIFT_DIRECTION = 0.0f;
+	//Typical volume of a fantail goldfish is 15in^3, .15kg, .02L (air sack), .25L (body)
+	private const float airVolumeFull = 0.02f; //listed in Liters
+	private const float airVolumeEmpty = 0.0f; //no air in air sack
+	private const float bodyVolumeFull = 0.27f; //inlcudes air sack
+	private const float bodyVolumeEmpty = 0.25f; //empty air sack
 
 	[Export]
 	public string ActionSuffix { get; set; } = "";
@@ -115,12 +122,13 @@ public partial class Player : CharacterBody2D
 		{
 			jumpSound.PitchScale = 1.0f;
 		}
-		else if (_doubleJumpCharged)
-		{
-			_doubleJumpCharged = false;
-			Velocity = new Vector2(Velocity.X * 2.5f, Velocity.Y);
-			jumpSound.PitchScale = 1.5f;
-		}
+		/*		else if (_doubleJumpCharged)
+				{
+					_doubleJumpCharged = false;
+					Velocity = new Vector2(Velocity.X * 2.5f, Velocity.Y);
+					jumpSound.PitchScale = 1.5f;
+				}
+				*/
 		else
 		{
 			return;
