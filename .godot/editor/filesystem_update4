@@ -1,3 +1,7 @@
 res://player/gun.gd
 res://player/Player.cs
 res://level/level.gd
+res://level/level.tscn
+res://level/tileset.tres
+res://level/props/wind_sway.tres
+res://gui/theme.tres

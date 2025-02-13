@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739075389
+::res://::1739075424
 default_bus_layout.tres::AudioBusLayout::6419567431398995635::1738839800::0::1::::<><>::
 game.gd::GDScript::-1::1738839800::0::1::::Game<>Node<>::
 game_singleplayer.tscn::PackedScene::2796527636363398270::1739072047::0::1::::<><>::res://game.gd<>uid://ctgumjaytuoch::::res://level/level.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn
@@ -64,14 +64,15 @@ tree_2.webp::CompressedTexture2D::7441597796757093123::1738839803::1738840057::1
 vine_1.webp::CompressedTexture2D::3903472584993895739::1738839803::1738840057::1::::<><>::
 vine_2.webp::CompressedTexture2D::3853910507831647316::1738839803::1738840057::1::::<><>::
 wind_sway.tres::ShaderMaterial::7837160837109431848::1739072029::0::1::::<><>::
-::res://player/::1739065341
+::res://player/::1739447607
+blubby_still_test_1_.webp::CompressedTexture2D::5880091372225963498::1739447462::1739447670::1::::<><>::
 bullet.gd::GDScript::-1::1738839803::0::1::::Bullet<>RigidBody2D<>::
 bullet.tscn::PackedScene::7576454832912866420::1738839803::0::1::::<><>::uid://coj0d33vyyqx1::::res://player/bullet.webp<>res://player/bullet.gd
 bullet.webp::CompressedTexture2D::5775589375201576008::1738839803::1738840057::1::::<><>::
 coin_pickup.wav::AudioStreamWAV::1604626350477914505::1738839804::1738840058::1::::<><>::
 gun.gd::GDScript::-1::1738839804::0::1::::Gun<>Marker2D<>::
 jump.wav::AudioStreamWAV::1282835396865514689::1738839804::1738840058::1::::<><>::
-Player.cs::CSharpScript::-1::1739069812::0::1::::<><>::
+Player.cs::CSharpScript::-1::1739446337::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::1490386745740603214::1739065408::0::1::::<><>::res://player/Player.cs<>uid://sjod173axgwf::::res://player/jump.wav<>uid://b01brytl75mwa::::res://player/shoot.wav<>res://player/gun.gd<>uid://cc7o7t0ramd6y::::res://player/robot.webp
 robot.webp::CompressedTexture2D::4980187363432508418::1738839804::1738840058::1::::<><>::
 shoot.wav::AudioStreamWAV::4194907962194048044::1738839804::1738840058::1::::<><>::
