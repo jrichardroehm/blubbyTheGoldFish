@@ -1,8 +1,9 @@
-res://game_singleplayer.tscn
+res://enemy/enemy.tscn
 res://level/tileset.tres
 res://level/props/wind_sway.tres
 res://gui/theme.tres
-res://level/AnimatedSprite2d.cs
+res://game_singleplayer.tscn
 res://level/level.tscn
 res://player/player.tscn
+res://level/AnimatedSprite2d.cs
 res://player/Player.cs
