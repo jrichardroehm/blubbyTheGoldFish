@@ -1,4 +1,4 @@
-# 2D Platformer
+# Blubby The Goldfish
 
 This game, in pre-alpha, is a pixel art 2D side-scroller with graphics and sound.
 
