@@ -21,7 +21,7 @@ level, and the player is invincible, unlike the enemies."
 config/tags=PackedStringArray("2d", "official", "physics", "tilemap")
 run/main_scene="res://game_singleplayer.tscn"
 config/features=PackedStringArray("4.3", "C#")
-config/icon="res://icon.webp"
+config/icon="res://thumbnailBlubby.png"
 
 [autoload]
 
