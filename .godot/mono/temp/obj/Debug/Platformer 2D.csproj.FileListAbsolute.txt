@@ -15,3 +15,20 @@ c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\
 c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.pdb
 c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.genruntimeconfig.cache
 c:\Users\2019\appDevelopment\godot\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\ref\Platformer 2D.dll
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.deps.json
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.runtimeconfig.json
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.dll
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\Platformer 2D.pdb
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.csproj.AssemblyReference.cache
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.AssemblyInfoInputs.cache
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.AssemblyInfo.cs
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.csproj.CoreCompileInputs.cache
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.csproj.CopyComplete
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.dll
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\refint\Platformer 2D.dll
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.pdb
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\Platformer 2D.genruntimeconfig.cache
+C:\Users\jrich\OneDrive\Documents\GitHub\blubbyTheGoldFish\.godot\mono\temp\obj\Debug\ref\Platformer 2D.dll

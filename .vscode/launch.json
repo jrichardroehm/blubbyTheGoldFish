@@ -9,7 +9,7 @@
             "name": "Launch Godot",
             "type": "coreclr",
             "request": "launch",
-            "program": "c:/Users/2019/appDevelopment/godot/Godot_v4.3-stable_mono_win64/Godot.exe",
+            "program": "${workspaceFolder}/.vscode/find_godot.bat",
             "args": [
                 "--path",
                 "${workspaceFolder}"

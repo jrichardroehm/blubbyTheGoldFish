@@ -88,19 +88,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2019\\.nuget\\packages\\": {}
+    "C:\\Users\\jrich\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\Platformer 2D.csproj",
+      "projectUniqueName": "C:\\Users\\jrich\\OneDrive\\Documents\\GitHub\\blubbyTheGoldFish\\Platformer 2D.csproj",
       "projectName": "Platformer 2D",
-      "projectPath": "C:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\Platformer 2D.csproj",
-      "packagesPath": "C:\\Users\\2019\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2019\\appDevelopment\\godot\\blubbyTheGoldFish\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "C:\\Users\\jrich\\OneDrive\\Documents\\GitHub\\blubbyTheGoldFish\\Platformer 2D.csproj",
+      "packagesPath": "C:\\Users\\jrich\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jrich\\OneDrive\\Documents\\GitHub\\blubbyTheGoldFish\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\2019\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jrich\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
