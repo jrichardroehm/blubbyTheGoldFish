@@ -5,9 +5,9 @@ public partial class Player : CharacterBody2D
 	[Signal]
 	public delegate void CoinCollectedEventHandler();
 
-	private const float WALK_SPEED = 300.0f;
+	private const float WALK_SPEED = 150.0f;
 	private const float ACCELERATION_SPEED = WALK_SPEED * 6.0f;
-	private const float JUMP_VELOCITY = -125.0f;
+	private const float JUMP_VELOCITY = -4.0f;
 	private const float TERMINAL_VELOCITY = 700.0f;
 	private const float DRIFT_SPEED = 0.0f;
 	private const float DRIFT_DIRECTION = 0.0f;
@@ -53,16 +53,16 @@ public partial class Player : CharacterBody2D
 			_doubleJumpCharged = true;
 		}
 
-		if (Input.IsActionJustPressed("jump" + ActionSuffix))
+		if (Input.IsActionPressed("jump" + ActionSuffix))
 		{
 			TryInflate();
 		}
-		else if (Input.IsActionJustReleased("jump" + ActionSuffix) && Velocity.Y < 0.0f)
+		else if (Input.IsActionPressed("jump" + ActionSuffix) && Velocity.Y < 0.0f)
 		{
 			// Reduce vertical momentum if the jump button is released early
 			//Velocity = new Vector2(Velocity.X, Velocity.Y * 0.6f);
 		}
-		if(Input.IsActionJustReleased("deflate" + ActionSuffix)){
+		if(Input.IsActionPressed("deflate" + ActionSuffix)){
 			Velocity = new Vector2(Velocity.X, -JUMP_VELOCITY+Velocity.Y);
 		}
 		
@@ -141,6 +141,6 @@ public partial class Player : CharacterBody2D
 		// }
 
 		Velocity = new Vector2(Velocity.X, JUMP_VELOCITY+Velocity.Y);
-		jumpSound.Play();
+		//jumpSound.Play();
 	}
 }

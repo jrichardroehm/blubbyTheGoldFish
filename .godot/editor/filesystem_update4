@@ -7,3 +7,5 @@ res://level/level.tscn
 res://player/player.tscn
 res://level/AnimatedSprite2d.cs
 res://player/Player.cs
+res://level/background/parallax_background.tscn
+res://player/gun.gd
