@@ -1,32 +1,22 @@
-# Blubby The Goldfish
+# Blubby the Goldfish
 
-This game, in pre-alpha, is a pixel art 2D side-scroller with graphics and sound.
+Blubby the Goldfish is an open-world exploration game where players control a goldfish swimming through a large, hand-crafted underwater map, discovering points of interest (a sunken ship, a cave, and more), meeting the characters found there, and completing side quests. See [`docs/GAME_DESIGN.md`](docs/GAME_DESIGN.md) for the full design doc.
 
-This is a relatively complete pre-alpha, although a fish
-that can jump, swim on slopes, fire bullets,
-interact with enemies, and more, is sort of wacky.
-In the future, blubby will be further fleshed out into a
-character with swimming animations in a fish bowl. Stick
-around to see our progress!
+**Current status:** pre-alpha, in transition. The project started from Godot's official 2D platformer demo and is being reworked toward the open-world exploration concept above. Core player movement (swimming, buoyancy) is in place, but the world/quest content, depth-pressure buoyancy rework, and non-player characters are still being built out.
 
-You will find most of the game's content in the `level.tscn` scene.
-You can open it from the default `game.tscn` scene, or double
-click on `level.tscn` in the `src/level/` directory.
-
-Language: C#/GDScript
+Engine: Godot 4.7, GDScript only (no C#/.NET)
 
 Renderer: Compatibility
 
-Unapologetically copied the following as starter code!
-Godot asset library: https://godotengine.org/asset-library/asset/120
+Originally bootstrapped from Godot's official 2D platformer demo as starter code for movement/physics scaffolding: https://godotengine.org/asset-library/asset/120
 
-## Features
+## Features (carried over from the starter template, being reworked)
 
-- Side-scrolling blubby controller using [`CharacterBody2D`](https://docs.godotengine.org/en/latest/classes/class_characterbody2d.html).
+- Swimming controller using [`CharacterBody2D`](https://docs.godotengine.org/en/latest/classes/class_characterbody2d.html).
     - Can swim on and snap to slopes.
     - Can shoot, including while jumping.
 - Enemies that crawl on the floor and change direction when they encounter an obstacle.
-- Camera that stays within the level’s bounds.
+- Camera that stays within the level's bounds.
 - Supports keyboard and gamepad controls.
 - Platforms that can move in any direction.
 - Gun that shoots bullets with rigid body (natural) physics.
