@@ -73,6 +73,11 @@ tile_map_data = PackedByteArray("AAAGAAMABAAAAAAAAQAHAAMAAwAAAAAAAQAIAAMABAAAAAA
 tile_set = ExtResource("1")
 rendering_quadrant_size = 32
 
+[node name="Layer0" type="TileMapLayer" parent="TileMap"]
+use_parent_material = true
+tile_set = ExtResource("1")
+rendering_quadrant_size = 32
+
 [node name="Grass" type="Node" parent="."]
 
 [node name="g1" type="Sprite2D" parent="Grass"]
