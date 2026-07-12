@@ -16,7 +16,7 @@ This is a passion project for the team, built primarily to nail the ascending/de
 
 ## Storyline
 
-- **Opening:** Blubby starts out as a house pet in a fishbowl/tank. The game begins with Blubby getting **flushed down the toilet** — a comedic, unceremonious send-off — and this is how he ends up in the open sea.
+- **Opening:** Blubby starts out as a house pet in a fishbowl/tank. The game begins with Blubby getting **flushed down the toilet**, a comedic, unceremonious send-off, and this is how he ends up in the open sea.
 - This origin frames the whole game as Blubby adjusting to (and exploring) his new world, and sets up the tone for the "forgetting" loop mechanic at the end: Blubby is a goldfish who forgets things easily, starting with how he got here in the first place.
 - The exact framing of the flush (cutscene vs. playable intro sequence) and how much backstory is shown before/after are still open for Patrick to design.
 
@@ -59,19 +59,19 @@ This is a passion project for the team, built primarily to nail the ascending/de
   - A sea turtle (potential friendly guide/mentor character)
   - An eel (mysterious/slightly menacing, fits darker areas like caves)
   - (Potential) other sea creatures
-- A **beta fish** lurks passively in the background throughout the map — an ambient presence rather than an active threat, adding atmosphere and a sense of "not being alone" in the water.
+- A **beta fish** lurks passively in the background throughout the map: an ambient presence rather than an active threat, adding atmosphere and a sense of "not being alone" in the water.
 
 ### 3. Win Condition
 
 - Players win by completing all side quests on the map — targeting **3-5 side quests** for the first map (a short, tight loop appropriate for a first playable/testbed build).
-- Upon completion, the game "resets" narratively — Blubby forgets everything (a goldfish-memory joke baked into the story) and the loop begins again.
+- Upon completion, the game "resets" narratively: Blubby forgets everything (a goldfish-memory joke baked into the story) and the loop begins again.
 - The forgetting beat should play **comedic and lighthearted** — leaning into goldfish-memory jokes and silly dialogue on reset, rather than a heavier or more mysterious tone.
 
 ### 4. Scoring / Progression
 
 - Traditional arcade scoring (points for pellets) is de-emphasized in favor of quest/discovery-based progression.
 - Food pellets (as an arcade collectible) are **cut** — there's no net-chase pressure driving that urgency anymore.
-- The team is open to some other food-related mechanic (not pellets) to give Blubby something to interact with while exploring — concept TBD.
+- The team is open to some other food-related mechanic (not pellets) to give Blubby something to interact with while exploring. Concept TBD.
 
 ### 5. Removed/Shelved Mechanics
 
@@ -97,7 +97,7 @@ The following mechanics from the original arcade concept are **shelved for now**
 - Sunken ship, cave, coral reef, cavern system, sunken town/ruins, kelp forest, and other location interiors.
 - Character sprites: crab, Davy Jones, octopus, sea turtle, eel, beta fish (ambient/background), and other creatures TBD.
 - Water/depth layering to visually communicate pressure and depth.
-- UI elements (quest tracker, depth indicator, etc.) — **visual style/approach left to Patrick as lead designer**.
+- UI elements (quest tracker, depth indicator, etc.). **Visual style/approach left to Patrick as lead designer**.
 
 ---
 
@@ -123,8 +123,8 @@ The following mechanics from the original arcade concept are **shelved for now**
 
 The vertical movement mechanic is being reworked to incorporate **depth-based water pressure**:
 
-- As Blubby swims deeper, water pressure increases, which **decreases buoyancy** — Blubby will naturally start sinking at depth and must actively inflate to ascend.
-- Conversely, as Blubby ascends, pressure decreases, which **increases buoyancy** — meaning Blubby will ascend faster the closer to the surface they get, requiring the player to manage/counteract this to avoid shooting upward uncontrollably.
+- As Blubby swims deeper, water pressure increases, which **decreases buoyancy**. Blubby will naturally start sinking at depth and must actively inflate to ascend.
+- Conversely, as Blubby ascends, pressure decreases, which **increases buoyancy**, meaning Blubby will ascend faster the closer to the surface they get, requiring the player to manage/counteract this to avoid shooting upward uncontrollably.
 - This creates a "control window" the player must manage: too little air and you sink, too much air near the surface and you rocket up.
 - The original placeholder equation (`y = x³` buoyancy based on fluid density, displaced volume, and gravity) will need to be extended to factor in a depth/pressure term. **This needs prototyping and playtesting to tune correctly** — treat original values as a starting point, not final.
 - Buoyancy tuning will happen **alongside content development** rather than as a gating prototype phase — iterate on the mechanic while the map and locations are being built out in parallel.
@@ -132,7 +132,7 @@ The vertical movement mechanic is being reworked to incorporate **depth-based wa
 ### Game Engine
 
 - **Godot**, .NET 6.0 SDK
-- Leverage Godot's 2D capabilities for parallax, smooth animation, and physics-driven buoyancy.
+- Use Godot's 2D capabilities for parallax, smooth animation, and physics-driven buoyancy.
 
 ### File Structure
 
@@ -208,4 +208,4 @@ Project (blubbyTheGoldFish)
 
 ## Summary
 
-Blubby the Goldfish is an open-world exploration game that begins with Blubby getting flushed down the toilet and washing out into the open sea. It centers on a large swimmable map, discoverable locations (sunken ship, cave, coral reef, cavern system, sunken town, kelp forest) with unique characters (crab, Davy Jones, octopus, sea turtle, eel, and an ambient beta fish), a short 3-5 quest win condition, and a core buoyancy/depth-pressure mechanic. On completion, Blubby comedically forgets everything and the loop begins again. The project serves as both a fun standalone game and a deliberate testbed for the descending/ascending mechanics the team wants to carry into a future, more ambitious diving game.
+Everything above serves two goals at once: a short, playable exploration game, and a proving ground for the buoyancy/depth-pressure mechanic the team wants to carry into a future, more ambitious diving game. If a decision doesn't clearly serve one of those two goals, it's probably scope creep for this first map.
