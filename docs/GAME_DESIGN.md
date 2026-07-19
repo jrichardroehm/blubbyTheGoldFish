@@ -87,7 +87,7 @@ The following mechanics from the original arcade concept are **shelved for now**
 ### Visual Style
 
 - Pixel art aesthetic targeting a **Stardew Valley level of pixel density** — modern, clean, and higher-detail than chunky SNES-era games like Final Fantasy V.
-- **Grid density has been decided at 64x64** (tile/grid unit size). All tile-based assets and level layout should be built to this grid.
+- **Grid density has been decided at 64x64** (tile/grid unit size), representing **6in x 6in** in-world (128px = 1ft). All tile-based assets and level layout should be built to this grid.
 - Parallax backgrounds for depth throughout the open water.
 - Smooth animations for Blubby and other characters.
 
@@ -126,8 +126,12 @@ The vertical movement mechanic is being reworked to incorporate **depth-based wa
 - As Blubby swims deeper, water pressure increases, which **decreases buoyancy**. Blubby will naturally start sinking at depth and must actively inflate to ascend.
 - Conversely, as Blubby ascends, pressure decreases, which **increases buoyancy**, meaning Blubby will ascend faster the closer to the surface they get, requiring the player to manage/counteract this to avoid shooting upward uncontrollably.
 - This creates a "control window" the player must manage: too little air and you sink, too much air near the surface and you rocket up.
-- The original placeholder equation (`y = x³` buoyancy based on fluid density, displaced volume, and gravity) will need to be extended to factor in a depth/pressure term. **This needs prototyping and playtesting to tune correctly** — treat original values as a starting point, not final.
-- Buoyancy tuning will happen **alongside content development** rather than as a gating prototype phase — iterate on the mechanic while the map and locations are being built out in parallel.
+- Gravity is set to real-world 1g (32.174 ft/s²) converted to the 128px = 1ft scale (`2d/default_gravity = 4118` in project settings), so buoyancy tuning starts from a physically accurate baseline rather than an arbitrary constant.
+- **First implementation (player.gd):** a waterline at y=400 splits the world — above it Blubby falls under normal gravity, below it buoyancy takes over.
+  - Blubby has a persistent air-sack fill level (0-1) that the inflate/deflate actions raise and lower gradually (not an instant velocity kick).
+  - Buoyant acceleration is derived from displaced volume vs. body mass: fish tissue is modeled slightly denser than water (sinks when fully deflated), while the inflated air sack displaces enough extra volume to float.
+  - Depth/pressure is modeled as a stylized (not literal Boyle's-law) falloff: the deeper Blubby goes, the less displacement the air sack contributes, up to a minimum floor so full inflation can still out-swim pressure at any reachable depth.
+- Buoyancy tuning will happen **alongside content development** rather than as a gating prototype phase — iterate on the mechanic while the map and locations are being built out in parallel. **This needs prototyping and playtesting to tune correctly** — treat current constants (waterline depth, pressure falloff distance, inflate/deflate rates) as a starting point, not final.
 
 ### Game Engine
 
@@ -165,6 +169,7 @@ Project (blubbyTheGoldFish)
 ### Resolution
 
 - **Grid density: 64x64.** Tile/grid unit size is decided; targeting Stardew Valley-comparable pixel density overall.
+- **Real-world scale: each 64x64 tile represents 6in x 6in**, giving a scale of 128px = 1ft. Physics constants (gravity, velocities) are tuned against this scale so movement corresponds to real-world units.
 
 ### Controls
 
