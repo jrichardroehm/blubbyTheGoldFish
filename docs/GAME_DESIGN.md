@@ -87,7 +87,7 @@ The following mechanics from the original arcade concept are **shelved for now**
 ### Visual Style
 
 - Pixel art aesthetic targeting a **Stardew Valley level of pixel density** — modern, clean, and higher-detail than chunky SNES-era games like Final Fantasy V.
-- Exact resolution/tile size **pending feedback from Patrick (Lead Designer)**.
+- **Grid density has been decided at 64x64** (tile/grid unit size). All tile-based assets and level layout should be built to this grid.
 - Parallax backgrounds for depth throughout the open water.
 - Smooth animations for Blubby and other characters.
 
@@ -164,7 +164,7 @@ Project (blubbyTheGoldFish)
 
 ### Resolution
 
-- TBD — targeting Stardew Valley-comparable pixel density; final resolution pending Patrick's design feedback.
+- **Grid density: 64x64.** Tile/grid unit size is decided; targeting Stardew Valley-comparable pixel density overall.
 
 ### Controls
 
@@ -196,7 +196,6 @@ Project (blubbyTheGoldFish)
 
 ## Open Questions / TBD
 
-- Final resolution and tile size (left to Patrick's design feedback)
 - Full design of the 3-5 side quests (what each involves, which locations they're tied to)
 - What non-pellet food/interaction mechanic (if any) Blubby should have while exploring
 - UI design for quest tracking and depth/pressure indication (left to Patrick)
