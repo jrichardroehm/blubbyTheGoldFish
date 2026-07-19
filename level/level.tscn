@@ -1,10 +1,7 @@
-[gd_scene load_steps=19 format=4 uid="uid://ctgumjaytuoch"]
+[gd_scene load_steps=12 format=4 uid="uid://ctgumjaytuoch"]
 
-[ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemy/enemy.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://cky6e5nl0nyod" path="res://level/platforms/platform.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://c3dh7xb6ef76q" path="res://level/coin.tscn" id="4"]
-[ext_resource type="Texture2D" uid="uid://bxsmiv7k3fngt" path="res://level/platforms/moving_platform.webp" id="6"]
 [ext_resource type="PackedScene" uid="uid://cw6nldo3rjyyq" path="res://level/background/parallax_background.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://ddmq5iwm2qd1j" path="res://level/props/flower_1.webp" id="11"]
 [ext_resource type="Texture2D" uid="uid://upfcr5xg5fvh" path="res://level/props/grass_3.webp" id="13"]
@@ -13,70 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://co8bwstg3ea6x" path="res://level/props/rock_1.webp" id="17"]
 [ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://level/props/wind_sway.tres" id="18"]
 [ext_resource type="Texture2D" uid="uid://crfy1osk1c1gc" path="res://level/props/ground_flowers_1.webp" id="20"]
-[ext_resource type="Texture2D" uid="uid://nr7ds37bebk6" path="res://level/background/fishbowl_200x200_test.webp" id="20_ub8g7"]
+[ext_resource type="Script" path="res://level/location_trigger.gd" id="21"]
 
-[sub_resource type="Animation" id="1"]
-resource_name = "move"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.001, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(707, 400), Vector2(800, 410), Vector2(800, 200), Vector2(800, 410)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_knmjc"]
-_data = {
-"move": SubResource("1")
-}
-
-[sub_resource type="Animation" id="2"]
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-28, 645), Vector2(-28, 350), Vector2(-28, 645)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_frb4n"]
-_data = {
-"move": SubResource("2")
-}
+[sub_resource type="CircleShape2D" id="22"]
+radius = 90.0
 
 [node name="Level" type="Node2D"]
 process_mode = 1
-
-[node name="TileMap" type="TileMap" parent="."]
-z_index = 1
-tile_set = ExtResource("1")
-rendering_quadrant_size = 32
-format = 2
-
-[node name="Layer1" type="TileMapLayer" parent="TileMap"]
-use_parent_material = true
-tile_map_data = PackedByteArray("AAAGAAMABAAAAAAAAQAHAAMAAwAAAAAAAQAIAAMABAAAAAAAAAABAAUABAAAAAAAAQACAAUAAwAAAAAAAAADAAUABAAAAAAAAAABAAcABAAAAAAAAQACAAcAAwAAAAAAAQADAAcAAwAAAAAAAQAEAAcABAAAAAAAAAABAAsACAAEAAAAAAACAAsACAAEAAAAAAADAAsACAAEAAAAAAAEAAsACAAEAAAAAAAFAAsACAAEAAAAAAAGAAsACAAEAAAAAAAHAAsACAAEAAAAAAAIAAsACAAEAAAAAAAJAAsACAAEAAAAAAAKAAsACAAEAAAAAAALAAsACAAEAAAAAAAMAAsACAAEAAAAAAD9/wsACAAEAAAAAAD+/wsACAAEAAAAAAD//wsACAAEAAAAAAAAAAsACAAEAAAAAAD9/woACAACAAEAAAD+/woACAACAAEAAAD//woACAACAAEAAAAAAAoACAACAAEAAAABAAoACAACAAEAAAACAAoACAACAAEAAAADAAoACAACAAEAAAAEAAoACAACAAEAAAAFAAoACAACAAEAAAAGAAoACAACAAEAAAAHAAoACAACAAEAAAAIAAoACAACAAEAAAAJAAoACAACAAEAAAAKAAoACAACAAEAAAALAAoACAACAAEAAAAMAAoACAACAAEAAAA=")
-tile_set = ExtResource("1")
-rendering_quadrant_size = 32
-
-[node name="Layer0" type="TileMapLayer" parent="TileMap"]
-use_parent_material = true
-tile_set = ExtResource("1")
-rendering_quadrant_size = 32
 
 [node name="Grass" type="Node" parent="."]
 
@@ -318,69 +258,23 @@ position = Vector2(30, -10)
 [node name="Coin3" parent="Coins/CoinsArc3" instance=ExtResource("4")]
 position = Vector2(60, 0)
 
-[node name="Platforms" type="Node" parent="."]
-
-[node name="Platform" parent="Platforms" instance=ExtResource("3")]
-z_index = 0
-position = Vector2(785, 66)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform"]
-callback_mode_process = 0
-libraries = {
-"": SubResource("AnimationLibrary_knmjc")
-}
-autoplay = "move"
-
-[node name="Platform2" parent="Platforms" instance=ExtResource("3")]
-position = Vector2(-127, 554)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
-callback_mode_process = 0
-libraries = {
-"": SubResource("AnimationLibrary_frb4n")
-}
-autoplay = "move"
-
-[node name="PlatformStatic" type="StaticBody2D" parent="Platforms"]
-z_index = -1
-position = Vector2(611, 135)
-rotation = 0.355618
-collision_layer = 16
-collision_mask = 0
-
-[node name="Sprite2" type="Sprite2D" parent="Platforms/PlatformStatic"]
-position = Vector2(-88.692, 10.5003)
-rotation = -0.246293
-texture = ExtResource("6")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/PlatformStatic"]
-position = Vector2(-400.776, 750.496)
-rotation = -0.35577
-scale = Vector2(0.878413, 1.83767)
-polygon = PackedVector2Array(-177.586, -20.6913, 966.52, -15.7104, 968.781, 34.8973, -176.787, 34.856)
-
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource("2")]
 z_index = 2
 position = Vector2(544, 355)
+modulate = Color(1, 0.85, 0.7, 1)
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource("2")]
 z_index = 2
 position = Vector2(492, 610)
+modulate = Color(0.85, 0.55, 1, 1)
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource("2")]
 z_index = 2
 position = Vector2(395, 53)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("7")]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(327, 188)
-scale = Vector2(5, 5)
-texture = ExtResource("20_ub8g7")
 
 [node name="Trees" type="Node" parent="."]
 
@@ -392,13 +286,329 @@ texture = ExtResource("15")
 
 [node name="Bushes" type="Node" parent="."]
 
+[node name="B1" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, -250)
+texture = ExtResource("16")
+
+[node name="B2" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, -250)
+texture = ExtResource("16")
+
+[node name="B3" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, -250)
+texture = ExtResource("16")
+
+[node name="B4" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, -250)
+texture = ExtResource("16")
+
+[node name="B5" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 230)
+texture = ExtResource("16")
+
+[node name="B6" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 230)
+texture = ExtResource("16")
+
+[node name="B7" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 230)
+texture = ExtResource("16")
+
+[node name="B8" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 230)
+texture = ExtResource("16")
+
+[node name="B9" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 710)
+texture = ExtResource("16")
+
+[node name="B10" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 710)
+texture = ExtResource("16")
+
+[node name="B11" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 710)
+texture = ExtResource("16")
+
+[node name="B12" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 710)
+texture = ExtResource("16")
+
+[node name="B13" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 1190)
+texture = ExtResource("16")
+
+[node name="B14" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 1190)
+texture = ExtResource("16")
+
+[node name="B15" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 1190)
+texture = ExtResource("16")
+
+[node name="B16" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 1190)
+texture = ExtResource("16")
+
+[node name="B17" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 1670)
+texture = ExtResource("16")
+
+[node name="B18" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 1670)
+texture = ExtResource("16")
+
 [node name="B19" type="Sprite2D" parent="Bushes"]
 z_index = -2
 material = ExtResource("18")
-position = Vector2(261, 57)
-rotation = -3.14159
-scale = Vector2(1, -1)
+position = Vector2(885, 1670)
 texture = ExtResource("16")
+
+[node name="B20" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 1670)
+texture = ExtResource("16")
+
+[node name="B21" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 2150)
+texture = ExtResource("16")
+
+[node name="B22" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 2150)
+texture = ExtResource("16")
+
+[node name="B23" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 2150)
+texture = ExtResource("16")
+
+[node name="B24" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 2150)
+texture = ExtResource("16")
+
+[node name="B25" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 2630)
+texture = ExtResource("16")
+
+[node name="B26" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 2630)
+texture = ExtResource("16")
+
+[node name="B27" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 2630)
+texture = ExtResource("16")
+
+[node name="B28" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 2630)
+texture = ExtResource("16")
+
+[node name="B29" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 3110)
+texture = ExtResource("16")
+
+[node name="B30" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 3110)
+texture = ExtResource("16")
+
+[node name="B31" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 3110)
+texture = ExtResource("16")
+
+[node name="B32" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 3110)
+texture = ExtResource("16")
+
+[node name="B33" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 3590)
+texture = ExtResource("16")
+
+[node name="B34" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 3590)
+texture = ExtResource("16")
+
+[node name="B35" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 3590)
+texture = ExtResource("16")
+
+[node name="B36" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 3590)
+texture = ExtResource("16")
+
+[node name="B37" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 4070)
+texture = ExtResource("16")
+
+[node name="B38" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 4070)
+texture = ExtResource("16")
+
+[node name="B39" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 4070)
+texture = ExtResource("16")
+
+[node name="B40" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 4070)
+texture = ExtResource("16")
+
+[node name="B41" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 4550)
+texture = ExtResource("16")
+
+[node name="B42" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 4550)
+texture = ExtResource("16")
+
+[node name="B43" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 4550)
+texture = ExtResource("16")
+
+[node name="B44" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 4550)
+texture = ExtResource("16")
+
+[node name="B45" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 5030)
+texture = ExtResource("16")
+
+[node name="B46" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 5030)
+texture = ExtResource("16")
+
+[node name="B47" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 5030)
+texture = ExtResource("16")
+
+[node name="B48" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 5030)
+texture = ExtResource("16")
+
+[node name="B49" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(-715, 5510)
+texture = ExtResource("16")
+
+[node name="B50" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(85, 5510)
+texture = ExtResource("16")
+
+[node name="B51" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(885, 5510)
+texture = ExtResource("16")
+
+[node name="B52" type="Sprite2D" parent="Bushes"]
+z_index = -2
+material = ExtResource("18")
+position = Vector2(1685, 5510)
+texture = ExtResource("16")
+
+[node name="Seafloor" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="Seafloor"]
+z_index = -1
+color = Color(0.32, 0.27, 0.22, 1)
+polygon = PackedVector2Array(-715, 5900, -180, 6500, 890, 6500, 1425, 5900, 1425, 6800, -715, 6800)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Seafloor"]
+polygon = PackedVector2Array(-715, 5900, -180, 6500, 890, 6500, 1425, 5900, 1425, 6800, -715, 6800)
 
 [node name="Rocks" type="Node" parent="."]
 
@@ -407,4 +617,55 @@ z_index = -2
 position = Vector2(376, 624)
 texture = ExtResource("17")
 
-[node name="FishBowlItems" type="Node" parent="."]
+[node name="CaveEntrance" type="Node2D" parent="."]
+position = Vector2(250, 600)
+
+[node name="Rock1" type="Sprite2D" parent="CaveEntrance"]
+z_index = 1
+scale = Vector2(1.4, 1.4)
+position = Vector2(-122, -44)
+texture = ExtResource("17")
+
+[node name="Rock2" type="Sprite2D" parent="CaveEntrance"]
+z_index = 1
+scale = Vector2(1.4, 1.4)
+position = Vector2(-84, -100)
+texture = ExtResource("17")
+
+[node name="Rock3" type="Sprite2D" parent="CaveEntrance"]
+z_index = 1
+scale = Vector2(1.4, 1.4)
+position = Vector2(-23, -128)
+texture = ExtResource("17")
+
+[node name="Rock4" type="Sprite2D" parent="CaveEntrance"]
+z_index = 1
+scale = Vector2(1.4, 1.4)
+position = Vector2(44, -122)
+texture = ExtResource("17")
+
+[node name="Rock5" type="Sprite2D" parent="CaveEntrance"]
+z_index = 1
+scale = Vector2(1.4, 1.4)
+position = Vector2(100, -84)
+texture = ExtResource("17")
+
+[node name="Rock6" type="Sprite2D" parent="CaveEntrance"]
+z_index = 1
+scale = Vector2(1.4, 1.4)
+position = Vector2(122, -44)
+texture = ExtResource("17")
+
+[node name="EntranceTrigger" type="Area2D" parent="CaveEntrance"]
+position = Vector2(0, -30)
+collision_layer = 0
+collision_mask = 1
+monitorable = false
+script = ExtResource("21")
+destination_scene_path = "res://level/locations/cave/cave.tscn"
+destination_spawn_position = Vector2(0, 900)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaveEntrance/EntranceTrigger"]
+shape = SubResource("22")
+
+[connection signal="body_entered" from="CaveEntrance/EntranceTrigger" to="CaveEntrance/EntranceTrigger" method="_on_body_entered"]

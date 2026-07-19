@@ -5,6 +5,12 @@ extends Node
 @onready var _pause_menu := $InterfaceLayer/PauseMenu as PauseMenu
 
 
+func _ready() -> void:
+	if LocationManager.has_pending_spawn:
+		var player := get_tree().get_first_node_in_group(&"player") as Node2D
+		player.global_position = LocationManager.consume_pending_spawn()
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"toggle_fullscreen"):
 		var mode := DisplayServer.window_get_mode()

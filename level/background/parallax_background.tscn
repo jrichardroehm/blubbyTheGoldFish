@@ -14,14 +14,20 @@ scroll_base_scale = Vector2(0.1, 0)
 motion_scale = Vector2(0.2, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sky"]
-position = Vector2(-809, 58)
-scale = Vector2(1.2, 1.2)
+position = Vector2(-809, -250)
+scale = Vector2(1.2, 3.98)
 texture = ExtResource("2")
 centered = false
 
 [node name="Sprite2" type="Sprite2D" parent="Sky"]
-position = Vector2(-809, 0)
-scale = Vector2(1.2, 1.2)
+position = Vector2(-809, 1783.76)
+scale = Vector2(1.2, 3.98)
+texture = ExtResource("2")
+centered = false
+
+[node name="Sprite3" type="Sprite2D" parent="Sky"]
+position = Vector2(-809, 3817.52)
+scale = Vector2(1.2, 3.98)
 texture = ExtResource("2")
 centered = false
 
